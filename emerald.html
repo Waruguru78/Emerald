@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Emerald</title>
+        <link rel="stylesheet" type="text/css" href="emerald.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?
+        family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+
+    <body>
+
+<!----- Home ----->
+
+        <section class="home">
+
+            <div class="main">
+
+                <header class="sticky-header">
+                    <div class="logo">
+                        <i class="fa-solid fa-e"></i>
+                    </div>
+
+                    <nav>
+                        <div class="spc">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <ul class="navigate">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Order</a></li>
+                            <li class="btn"><a href="#">contact</a></li>
+                        </ul>
+                    </nav>
+
+                </header>
+
+                <div class="container">
+
+                    <div class="main-text">
+
+                        <h1>EMERALD <span>SPARKLE</span></h1>
+                        <h2>ALL PURPOSE <span> DETERGENT</span></h2>
+                        <p>
+                            It is <span class="input"></span>
+                        </p>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                        </div>
+                        
+                        <button type="button">
+                            Our Products
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+<!----- ABOUT ----->
+
+        <section class="about">
+
+            <div>
+
+                <h2>About Us</h2>
+
+                <br>
+                <p>
+                    Our strong point is providing solutions to your problems.
+                </p>
+
+                <br>
+
+                <h3> Our Detergent</h3>
+
+                <br>
+
+                <p>
+                    Our detergent is easily soluble in hard water and has a strong cleaning agent than soap. <br>
+                    It contains a natural mixture of soap and has various purposes. <br>
+                    The detergent is accessible and available for everybody  <br> 
+                    including infants, the elderly, and those who are prone to allergies.   
+                </p>
+
+            </div>
+
+            <br>
+            
+            <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1</div>
+                    <img src="Images/Main.jpg" style="width:100%">
+                <div class="text">
+                    The detergent contains surfactants and other ingredients that help with cleaning and disinfecting. 
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2</div>
+                    <img src="Images/IMG4.jpg" style="width:100%">
+                <div class="text">
+                    It is specifically designed to break down grease and food particles on dishes <br> in order to make them easier to clean.
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3</div>
+                    <img src="Images/IMG3.jpg" style="width:100%">
+                <div class="text">
+                    It is designed to clean toilets <br>
+                    Contains variety of cleaning agents and ingredients <br>
+                    such as fragrances and dyes, to make it more pleasant to use.
+                </div>
+            </div>
+
+            </div>
+
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+        </section>
+
+<!----- ORDER ----->
+
+        <section class="order">
+
+            <div class="title">
+
+                <h1>ORDER</h1>
+                <br>
+                <p>Make your order here</p>
+            </div>
+
+            <form >
+            
+                <div class="container">
+                    <form>
+                      <label for="fullname">Full Name</label>
+                      <input type="text" id="fname" name="fullname" placeholder="Your name..">
+                        <br>
+                      <label for="lname">Email Adress</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your email address..">
+                        <br>
+                      <label for="contact">Contact</label>
+                      <input type="text" id="contact" name="contact" placeholder="Your contact..">
+                        <br>
+                        <label for="adress">Adress</label>
+                        <input type="text" id="adress" name="Address" placeholder="Your address..">
+                        <br>
+                      <label for="city">City/town</label>
+                      <select id="city" name="city">
+                        <option value="City">city/town</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="Nakuru">Nakuru</option>
+                      </select>
+                      <br>
+                      <input type="submit" value="Submit">
+
+            </form>
+
+        </section>
+
+<!----- FOOTER ----->
+
+        <section class="footer">
+
+            <div class="title">
+
+                <h1>Contact Us</h1>
+
+            </div>
+            
+
+            <div class="container">
+                <form >
+
+                    <label for="fname">Full Name</label>
+                    <input type="text" id="fname" name="fullname" placeholder="Your name..">
+                    <br>
+                    <label for="email">Email Address</label>
+                    <input type="text" id="Email" name="email" placeholder="Your email address..">
+                    <br>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+                
+                    <input type="submit" value="Submit">
+
+                </form>
+            
+            <div class="footer">
+                <P>&copy 2023 All Rights Reserved </P>
+            </div>
+
+        </section>
+
+        <script type="text/javascript" src="js/script.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".input",{
+                strings:["BIODEGRADABLE.", "POCKET-FRIENDLY.", "CLEANER FOR ALL SURFACES.", "INCLUSIVE OF UTENSILS AND WASHROOM." ],
+                typeSpeed: 70,
+                backSpeed: 60,
+                loop:true
+            });
+        </script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    </body>
+
+</html>
