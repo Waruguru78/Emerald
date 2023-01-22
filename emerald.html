@@ -6,6 +6,7 @@
 
         <title>Emerald</title>
         <link rel="stylesheet" type="text/css" href="emerald.css">
+        <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +27,7 @@
 
                 <header class="sticky-header">
                     <div class="logo">
-                        <i class="fa-solid fa-e"></i>
+                        <img src="Images/Logo3.png" width="250" height="40" alt="EMERALD SPARKLE">
                     </div>
 
                     <nav>
@@ -39,7 +40,7 @@
                         <ul class="navigate">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
-                            <li><a href="#">Order</a></li>
+                            <li><a href="#">Our Products</a></li>
                             <li class="btn"><a href="#">contact</a></li>
                         </ul>
                     </nav>
@@ -63,7 +64,7 @@
                         </div>
                         
                         <button type="button">
-                            Our Products
+                            Order
                         </button>
 
                     </div>
@@ -85,6 +86,8 @@
                 <br>
                 <p>
                     Our strong point is providing solutions to your problems.
+                   <br>
+                    Our brand is here to help you keep your toilet and bathroom clean and germ free, and your family safe and well. 
                 </p>
 
                 <br>
@@ -108,7 +111,7 @@
 
             <div class="mySlides fade">
                 <div class="numbertext">1</div>
-                    <img src="Images/Main.jpg" style="width:100%">
+                    <img src="Images/Main.jpg" style="width:80% height 40%">
                 <div class="text">
                     The detergent contains surfactants and other ingredients that help with cleaning and disinfecting. 
                 </div>
@@ -116,7 +119,7 @@
 
             <div class="mySlides fade">
                 <div class="numbertext">2</div>
-                    <img src="Images/IMG4.jpg" style="width:100%">
+                    <img src="Images/IMG4.jpg" style="width:80%">
                 <div class="text">
                     It is specifically designed to break down grease and food particles on dishes <br> in order to make them easier to clean.
                 </div>
@@ -124,7 +127,7 @@
 
             <div class="mySlides fade">
                 <div class="numbertext">3</div>
-                    <img src="Images/IMG3.jpg" style="width:100%">
+                    <img src="Images/IMG3.jpg" style="width:80%">
                 <div class="text">
                     It is designed to clean toilets <br>
                     Contains variety of cleaning agents and ingredients <br>
@@ -150,39 +153,49 @@
 
             <div class="title">
 
-                <h1>ORDER</h1>
-                <br>
-                <p>Make your order here</p>
+                <h1>Our Products</h1>
+                
             </div>
 
-            <form >
-            
-                <div class="container">
-                    <form>
-                      <label for="fullname">Full Name</label>
-                      <input type="text" id="fname" name="fullname" placeholder="Your name..">
-                        <br>
-                      <label for="lname">Email Adress</label>
-                      <input type="text" id="lname" name="lastname" placeholder="Your email address..">
-                        <br>
-                      <label for="contact">Contact</label>
-                      <input type="text" id="contact" name="contact" placeholder="Your contact..">
-                        <br>
-                        <label for="adress">Adress</label>
-                        <input type="text" id="adress" name="Address" placeholder="Your address..">
-                        <br>
-                      <label for="city">City/town</label>
-                      <select id="city" name="city">
-                        <option value="City">city/town</option>
-                        <option value="nairobi">Nairobi</option>
-                        <option value="mombasa">Mombasa</option>
-                        <option value="kisumu">Kisumu</option>
-                        <option value="Nakuru">Nakuru</option>
-                      </select>
-                      <br>
-                      <input type="submit" value="Submit">
+            <section>
+                <nav>
+                  <ul>
+                    <li><a href="#">Utensils</a></li> <br>
+                    <li><a href="#">Bathroom </a></li> <br>
+                    <li><a href="#">Toilet</a></li> <br>
+                  </ul>
+                </nav>
+                
+                <article>
+                    <div class="Utensils">
+                        <h2>Utensils Detergent</h2>
+                        <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                    </div>
+                    <br>
+                    <div class="Bathroom">
+                        <h2>Bathroom Detergent</h2>
+                        <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                    </div>
+                    <br>
+                    <div class="Toilet">
+                        <h2>Toilet Detergent</h2>
+                        <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+                        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+                    </div>
+                </article>
+              </section>
 
-            </form>
+              <div class="caution">
+
+                <img src="Images/IMGa.jpeg" alt="#">
+                <img src="Images/IMGb.jpeg" alt="#">
+                <img src="Images/IMGc.jpeg" alt="#">
+                <img src="Images/IMGd.jpeg" alt="#">
+
+              </div>
+
 
         </section>
 
@@ -207,8 +220,8 @@
                     <input type="text" id="Email" name="email" placeholder="Your email address..">
                     <br>
                     <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
-                
+                    <textarea id="subject" name="subject" placeholder="Feedback/query.." style="height:100px"></textarea>
+                    <br>
                     <input type="submit" value="Submit">
 
                 </form>
