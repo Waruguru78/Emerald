@@ -243,9 +243,14 @@ span{
 }
 .about h2{
     color: lime;
+    font-weight: 600;
+    font-size: xx-large;
+ 
 }
 .about h3{
     color: lime;
+    font-weight: bolder;
+    font-size: larger;
 }
 .about p{
     padding: 0;
