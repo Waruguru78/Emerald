@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Emerald</title>
         <link rel="stylesheet" type="text/css" href="emerald.css">
@@ -25,14 +25,16 @@
     <body>
 
 <!----- Home ----->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <section class="home">
 
             <div class="main">
 
                 <header class="sticky-header">
                     <div class="logo">
-                        <img src="Images/Logo3.png" width="250" height="40" alt="EMERALD SPARKLE">
+                        <a href="emerald.html">
+                            <img src="Images/Logo3.png" width="150" height="60" alt="EMERALD SPARKLE">
+                        </a>
                     </div>
 
                     <nav>
@@ -57,6 +59,7 @@
                     <div class="main-text">
 
                         <h1>EMERALD <span>SPARKLE</span></h1>
+                        <h1><span>All-Purpose</span>Detergent</h1>
                         <p>
                             It is <span class="input"></span>
                         </p>
@@ -103,7 +106,7 @@
                         Emerald, <br> All-purpose <br> Detergent. <br> Always the Best.
 
                     </div>
-
+                    
                 </div>
 
             </div>
@@ -255,23 +258,35 @@
                 <div>
 
                     <h2 style="color: lime; font-weight: 700; position: absolute; left: 40%;">How to Use</h2>
-                    
-                    <br><br>
+                
+                    <br><br><br><br>    
 
                     <div class="measure">
-                        <img src="Images/Img1.jpeg" alt="Smiley face" style="position: relative; left:-10px; width:200px;height:150px;">
+                        <img src="Images/Img1.jpeg" alt="Smiley face" 
+                        style=" position: relative; 
+                                left:-80px; 
+                                width:200px;
+                                height:150px;">
                         <p>
                             Measure using the lid the amout of detergent according to the amout of water you are using.
                         </p>  
                     </div>
                     <div class="stir">
-                        <img src="Images/Img2.jpeg" alt="Smiley face" style="position: relative; left: 200px;width:200px;height:150px;">
+                        <img src="Images/Img2.jpeg" alt="Smiley face" 
+                        style=" position: relative; 
+                                left: 130px;
+                                width:200px;
+                                height:150px;">
                         <p>
                             Stir the detergent using your hand in order to mix throughly with the water.
                         </p>  
                     </div>
                     <div class="wash">
-                        <img src="Images/Img3.jpeg" alt="Smiley face" style="position: relative; left: 400px;width:200px;height:150px;">
+                        <img src="Images/Img3.jpeg" alt="Smiley face" 
+                        style=" position: relative; 
+                                left: 330px;
+                                width:200px;
+                                height:150px;">
                         <p>
                             Put your dirty clothes in the water and then wash them.
                             <br>
@@ -365,7 +380,7 @@
                 </form>
             
             <div class="footer">
-                <a href="https://api.whatsapp.com/send?phone=0712345678&text=Hello this is the starting message"style="display: table; font-family: sans-serif; text-decoration: none; margin: 1em auto; color: #fff; font-size: 0.9em; padding: 1em 2em 1em 3.5em; border-radius: 2em; font-weight: bold; background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; background-size: 1.6em;">Chat on WhatsApp </a>
+                <a href="https://api.whatsapp.com/send?phone=0712345678&text=Hello this is the starting message"></a>
                 <P>&copy 2023 All Rights Reserved </P>
             </div>
 
@@ -383,27 +398,27 @@
             });
         </script>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-    </script>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
 
     </body>
 

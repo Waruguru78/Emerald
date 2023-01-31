@@ -174,3 +174,28 @@ nav .navigate li.btn:hover a{
   from {opacity: .4}
   to {opacity: 1}
 }
+.footer p{
+    color: black;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+.footer a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: green;
+    z-index: 100;
+    background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; 
+    background-size: 1.6em;
+}
+@media only screen and (max-width: 768px) {
+    .footer a {
+      display: flex;
+    }
+}

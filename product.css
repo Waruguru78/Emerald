@@ -202,3 +202,75 @@ input[type=submit]:hover {
 .caution h2{
     font-weight: 400;
 }
+.How_to_use{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.How_to_use .measure p{
+    color: whitesmoke; 
+    text-align: right;
+    position: relative;
+    right: -330px;
+    top: -80px;
+} 
+.How_to_use .stir p{
+    color: whitesmoke; 
+    text-align: right;
+    position: relative;
+    right: -430px;
+    top: -80px;
+} 
+.How_to_use .wash p{
+    color: whitesmoke; 
+    text-align: right;
+    position: relative;
+    right: -530px;
+    top: -80px;
+} 
+.footer p{
+    color: black;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+.footer a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: green;
+    z-index: 100;
+    background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; 
+    background-size: 1.6em;
+}
+@media only screen and (max-width: 768px){
+    .footer a {
+        display: flex;
+      }
+    .How_to_use{
+        justify-content: space-between;
+    }
+    .How_to_use .measure,
+    .How_to_use .stir,
+    .How_to_use .wash {
+      width: calc(33.33% + 2px);
+      margin-bottom: 0;
+    }
+    .How_to_use .measure p,
+    .How_to_use .stir p,
+    .How_to_use .wash p {
+      width: calc(33.33% + 5px);
+      margin-bottom: 0;
+    }
+    .How_to_use .measure img,
+    .How_to_use .stir img,
+    .How_to_use .wash img {
+      margin-bottom: 20px;
+    }
+  }
