@@ -17,92 +17,230 @@
         family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+        <style>
+            
+            .sticky-header{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgb(22, 70, 22);
+                padding: 20px;
+                text-align: center;
+                z-index: 1;
+                transition: all 0.3s ease;
+            }
+            .logo{
+                height: 10%;
+                width: 10%;
+                background: transparent;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                cursor: pointer;
+                position: absolute;
+                left: 20px;
+                top: 40px;
+            }
+            nav .spc{
+                width: 35px;
+                height: 24px;
+                right: 3%;
+                top: 60px;
+                z-index: 5;
+                background: whitesmoke;
+                position: absolute;
+                cursor: pointer;
+                display: none;
+            }
+            nav .spc span{
+                display: block;
+                background: green;
+                width: 100%;
+                height: 3px;
+                transition: .3s;
+                transition-property: transform,opacity;
+            }
+            nav .spc span:nth-child(2){
+                margin: 7px opx;
+            }
+            nav .navigate{
+                list-style: none;
+            }
+            nav .navigate li{
+                display: inline-block;
+                position: relative;
+                left: 400px;
+            }
+            nav .navigate li a{
+                display: inline-block;
+                color: whitesmoke;
+                margin-left: 55px;
+                font-size: 15px;
+                font-weight: 600;
+            }
+            nav .navigate li:not(:last-child) a:hover{
+                color: green;
+                transition: .4s;
+            }
+            nav .navigate li.btn a{
+                display: inline-block;
+                background: transparent;
+                border: 2px solid green;
+                padding: 9px 28px;
+                border-radius: 30px;
+                line-height: 1.3;
+                color: whitesmoke;
+                font-weight: 500;
+            }
+            nav .navigate li.btn:hover a{
+                background: green;
+                color: whitesmoke;
+                border: 2px solid transparent;
+                transition: .4s;
+            }
+            form {
+                width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            input, select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            footer a{
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                background-color: green;
+                z-index: 100;
+                background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; 
+                background-size: 1.6em;
+            }
+            .footer p{
+                color: black;
+                letter-spacing: 2px;
+                font-size: 15px;
+            }
+        </style>
     </head>
 
     <body>
 
+    
 
+            <div class="main">
 
-        <div class="main">
-
-            <header class="sticky-header">
-                <div class="logo">
-                    <a href="emerald.html">
-                        <img src="Images/Logo3.png" width="150" height="60" alt="EMERALD SPARKLE">
-                    </a>    
-                </div>
-
-                <nav>
-                    <div class="spc">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                <header class="sticky-header">
+                    <div class="logo">
+                        <a href="emerald.html">
+                            <img src="Images/Logo3.png" width="150" height="60" alt="EMERALD SPARKLE">
+                        </a>    
                     </div>
 
-                    <ul class="navigate">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="product.html">Our Products</a></li>
-                        <li class="btn"><a href="#">contact</a></li>
-                    </ul>
-                </nav>
+                    <nav>
+                        <div class="spc">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 
-            </header>
+                        <ul class="navigate">
+                            <li><a href="emerald.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="product.html">Our Products</a></li>
+                            <li class="btn"><a href="mailto:wanguielizabeth138@gmail.com">contact</a></li>
+                        </ul>
+                    </nav>
 
-        </div>
+                </header>
 
-
-        
-        <section class="order" style="background-color: green;">
-
-            <div class="title">
-        
-                <h1>ORDER</h1>
-                <br>
-                <p>Make your order here</p>
             </div>
-        
-            <form >
+
+        <br><br>
+
+        <div class="order" style="background-color: wheat;">
+
+            <h1 style="color: black;">ORDER</h1>
+            <br>
+            <h3 style="color: black;">Make your order here</h3>
             
-                <div class="container">
-                    <form>
-                      <label for="fullname"></label>
-                      <input type="text" id="fname" name="fullname" placeholder="Your name..">
-                        <br>
-                      <label for="lname"></label>
-                      <input type="text" id="lname" name="lastname" placeholder="Your email address..">
-                        <br>
-                      <label for="contact"></label>
-                      <input type="text" id="contact" name="contact" placeholder="Your contact..">
-                        <br>
-                        <label for="adress"></label>
-                        <input type="text" id="adress" name="Address" placeholder="Your address..">
-                        <br>
-                      <label for="city"></label>
-                      <select id="city" name="city">
-                        <option value="City">city/town</option>
-                        <option value="nairobi">Nairobi</option>
-                        <option value="mombasa">Mombasa</option>
-                        <option value="kisumu">Kisumu</option>
-                        <option value="Nakuru">Nakuru</option>
-                      </select>
-                      <br>
-                      <input type="submit" value="Submit" style="background-color: whitesmoke; color: black;">
+            <form class="order">
+
+                <label for="fullname"></label>
+                <input type="text" class="name" name="fullname" placeholder="Your name..">
+                <br>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Your email address..">
+                <br>
+                <label for="contact"></label>
+                <input type="tel" id="contact" name="contact" placeholder="Your contact..">
+                <br>
+                <label for="adress"></label>
+                <input type="text" id="adress" name="Address" placeholder="Your address..">
+                <br>
+                <label for="city"></label>
+                <select id="city" name="city">
+                <option value="City">city/town</option>
+                <option value="nairobi">Nairobi</option>
+                <option value="mombasa">Mombasa</option>
+                <option value="kisumu">Kisumu</option>
+                <option value="Nakuru">Nakuru</option>
+                </select>
+                <br>
+                <input type="submit" value="Submit" style="background-color: whitesmoke; color: black;">
         
             </form>
         
-        </section>
+        </div>
 
         
 
           <div class="footer">
-              <a href="https://api.whatsapp.com/send?phone=0712345678&text=Hello this is the starting message"style="display: table; font-family: sans-serif; text-decoration: none; margin: 1em auto; color: #fff; font-size: 0.9em; padding: 1em 2em 1em 3.5em; border-radius: 2em; font-weight: bold; background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; background-size: 1.6em;">Chat on WhatsApp </a>
-              <P>&copy 2023 All Rights Reserved </P>
+            <a href="https://api.whatsapp.com/send?phone=0712345678&text=Hello this is the starting message"></a>
+            <P>&copy 2023 All Rights Reserved </P>
           </div>
       
       
-
+         
+<!-----  <li class="btn" style="background-color: lawngreen; border-radius: 20px;">
+            <a href="order.html">Order Here</a>
+        </li> ----->
     </body>
     
 </html>
