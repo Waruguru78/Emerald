@@ -20,7 +20,7 @@ body{
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Images/Foam.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Images/bubbles.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -35,13 +35,7 @@ body{
     text-align: center;
     z-index: 1;
     transition: all 0.3s ease;
-}
-header{
-    padding: 40px 0 30px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
+    text-decoration: none;
 }
 .logo{
     height: 10%;
@@ -78,26 +72,27 @@ nav .spc span{
 nav .spc span:nth-child(2){
     margin: 7px opx;
 }
-nav .navigate{
+nav {
     list-style: none;
 }
-nav .navigate li{
+nav  li{
     display: inline-block;
     position: relative;
     left: 400px;
 }
-nav .navigate li a{
+nav li a{
     display: inline-block;
     color: whitesmoke;
     margin-left: 55px;
     font-size: 15px;
     font-weight: 600;
+    text-decoration: none;
 }
-nav .navigate li:not(:last-child) a:hover{
+nav li:not(:last-child) a:hover{
     color: green;
     transition: .4s;
 }
-nav .navigate li.btn a{
+nav  li.btn a{
     display: inline-block;
     background: transparent;
     border: 2px solid green;
@@ -107,11 +102,30 @@ nav .navigate li.btn a{
     color: whitesmoke;
     font-weight: 500;
 }
-nav .navigate li.btn:hover a{
+nav li.btn:hover a{
     background: green;
     color: whitesmoke;
     border: 2px solid transparent;
     transition: .4s;
+}
+.header__toggle {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    nav li {
+        display: none;
+    }
+    .header__toggle{
+        display: block;
+        float: right;
+        margin-top: -60px;
+    }
+    .header__toggle img{
+        width: 60px;
+        height: 50px;
+        
+    }
+    
 }
 .container{
     padding-top: 190px;
@@ -125,6 +139,16 @@ nav .navigate li.btn:hover a{
     font-weight: 1000;
     line-height: 1.2;
     margin: 20px 0px 20px;
+}
+@media screen  and (min-width: 600px) {
+    .container .main-text h1{
+        font-size: 80px;
+    }
+}
+@media screen  and (max-width: 768px) {
+    .container .main-text h1{
+        font-size: 40px;
+    }
 }
 span{
     color: lime;
@@ -179,6 +203,16 @@ span{
     color: whitesmoke;
     transition: .4s;
 }
+@media screen and(max-width : 992px) {
+    .home{
+        background-color: aliceblue;
+    }
+}
+@media screen and(max-width : 600px) {
+    .home{
+        background-color: aqua;
+    }
+}
 
 /*----- about ------*/
 
@@ -201,6 +235,19 @@ span{
     color: whitesmoke;
     font-size: 25px;
 }
+.a-text {
+    width: 80%;
+    margin: 0 auto;
+}
+  
+.p-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    padding: 20px;
+}
+  
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -286,6 +333,17 @@ span{
     height: auto;
     margin-bottom: 15px;
 }
+.detergent-item .p-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+.detergent-item .a-text {
+    width: 80%;
+    margin: 0 auto;
+}
   
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -309,13 +367,27 @@ body {font-family: Arial, Helvetica, sans-serif;}
     flex-direction: column;
     align-items: center;
 }
-  
+.use h2 {
+    color: lime;
+    font-weight: 700;
+}
+.use .p-text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: whitesmoke;
+    text-align: left;
+    padding: 20px;
+}
+.use .a-text {
+    width: 80%;
+    margin: 0 auto;
+}
 .using {
     width: 100%;
     margin: 50px 0;
     text-align: center;
 }
-.using p, h2{
+.using p{
     color: whitesmoke;
 }
   
@@ -344,27 +416,60 @@ img {
 }
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
-
-.footer input[type=text], select, textarea {
-  width: 80%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: green;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
+#contact {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: wheat;
+    color: green;
+  }
+  
 input[type=submit]:hover {
   background-color: #04AA6D;
 }
