@@ -29,21 +29,20 @@ if(isset($_POST['add_order'])){
     else
         echo "Order not Added!!";
 }
-elseif(isset($_POST['add_product'])){
+elseif(isset($_POST['contact_us'])){
 
-    $query = "INSERT INTO products set product=:product, name=:name, orders=:orders, price=:price";
+    $query = "INSERT INTO contact set name=:name, email=:email, message=:message";
 
     $query = $db->prepare($query);
 
-    $query->bindParam(':product', $data['product']);
     $query->bindParam(':name', $data['name']);
-    $query->bindParam(':orders', $data['orders']);
-    $query->bindParam(':price', $data['price']);
+    $query->bindParam(':email', $data['email']);
+    $query->bindParam(':message', $data['message']);
 
     $status = $query->execute();
 
     if ($status)
-        echo "Product Added";
+        echo "Message sent!";
     else
-        echo "Product not Added!!";
+        echo "Message not sent!!";
 }

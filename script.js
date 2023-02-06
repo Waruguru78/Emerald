@@ -22,16 +22,16 @@ $('.order').submit(function(event){
     })
 });
 
-$('.products').submit(function(event){
+$('.contact').submit(function(event){
 
 event.preventDefault()
 
-const product =  $('.product').val();
 const name =  $('.name').val();
-const orders =  $('.orders').val();
-const price =  $('.price').val();
+const email =  $('.email').val();
+const message =  $('.message').val();
 
-$.post('server.php',{ add_product:true, product:product, name:name, orders:orders, price:price})
+
+$.post('server.php',{ contact_us:true, name:name, email:email, message:message})
 .done((response)=>{
 
     console.log(response)
