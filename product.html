@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <title>Products</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+        <style>
+                        .sticky-header{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgb(22, 70, 22);
+                padding: 20px;
+                text-align: center;
+                z-index: 1;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            }
+            .logo{
+                height: 10%;
+                width: 10%;
+                background: transparent;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                cursor: pointer;
+                position: absolute;
+                left: 20px;
+                top: 40px;
+            }
+            nav .spc{
+                width: 35px;
+                height: 24px;
+                right: 3%;
+                top: 60px;
+                z-index: 5;
+                background: whitesmoke;
+                position: absolute;
+                cursor: pointer;
+                display: none;
+            }
+            nav .spc span{
+                display: block;
+                background: green;
+                width: 100%;
+                height: 3px;
+                transition: .3s;
+                transition-property: transform,opacity;
+            }
+            nav .spc span:nth-child(2){
+                margin: 7px opx;
+            }
+            nav {
+                list-style: none;
+            }
+            nav  li{
+                display: inline-block;
+                position: relative;
+                left: 300px;
+            }
+            nav a{
+                text-decoration: none;
+            }
+            nav li a{
+                display: inline-block;
+                color: whitesmoke;
+                margin-left: 55px;
+                font-size: 15px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+            nav li:not(:last-child) a:hover{
+                color: green;
+                transition: .4s;
+            }
+            nav  li.btn a{
+                display: inline-block;
+                background: transparent;
+                border: 2px solid green;
+                padding: 9px 28px;
+                border-radius: 30px;
+                line-height: 1.3;
+                color: whitesmoke;
+                font-weight: 500;
+            }
+            nav li.btn:hover a{
+                background: green;
+                color: whitesmoke;
+                border: 2px solid transparent;
+                transition: .4s;
+            }
+            .header__toggle {
+                display: none;
+            }
+            @media screen and (max-width: 768px) {
+                nav li {
+                    display: none;
+                }
+                .header__toggle{
+                    display: block;
+                    float: right;
+                    margin-top: 0px;
+                    position: relative;
+                    right: 40px;
+                }
+                .header__toggle img{
+                    width: 60px;
+                    height: 50px;
+
+                    
+                }
+                
+            }
+            .container {
+                width: 100%;
+                margin: 0 auto;
+                padding: 10px;
+                background-color: antiquewhite;
+                background-size: cover;
+            }
+            .container h1, h2{
+                color: limegreen;
+                text-align: center;
+            }
+            .product {
+                margin: 50px 0;
+            }
+
+            .product-images {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .product-images img {
+                width: 200px;
+                height: 200px;
+                margin-right: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header class="sticky-header">
+            <div class="logo">
+                <a href="emerald.html">
+                    <img src="Images/Logo3.png" width="150" height="60" alt="EMERALD SPARKLE">
+                </a>
+            </div>
+
+            <nav>
+                <div class="spc">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul>
+                    <li><a href="emerald.html">Home</a></li>
+                    <li><a href="emerald.html#about">About</a></li>
+                    <li><a href="emerald.html#product">Our Products</a></li>
+                    <li class="btn"><a href="#">contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="header__toggle">
+                <img src="Images/list (1).png" alt="MENU">
+            </button>
+        </header>
+
+        <br><br><br><br><br><br>
+
+        <div class="container">
+            <h1>Our Products</h1>
+          
+            <div class="product" id="U-detergent">
+              <h2>Utensils Detergent</h2>
+              <div class="product-images">
+                <img src="IMGS/Utensils1.jpeg" alt="Product 1 Image 1">
+                <img src="IMGS/Utensils2.jpeg" alt="Product 1 Image 2">
+                <img src="IMGS/Utensils3.png" alt="Product 1 Image 3">
+              </div>
+              <p>
+                - Our Utensils detergent is a cleaning solution specifically designed to clean utensils such as plates, bowls, glasses, and cutlery. <br>
+                - The Utensils detergent is often formulated to effectively remove food residue, grease, and stains from the surface of utensils, <br>
+                leaving them clean and hygienic. It can be used in both manual and dishwasher cleaning. <br> 
+                - When cleaning utensils, it is best to use an all-purpose dish detergent. <br>
+                - Be sure to use a gentle detergent, as harsher detergents can damage the utensils. <br> 
+                - It should be gentle on your utensils and doesn't leave a soapy residue. <br>
+              </p>
+            </div>
+          
+            <div class="product" id="B-detergent">
+              <h2>Bathroom Detergent</h2>
+              <div class="product-images">
+                <img src="IMGS/Bathroom1.jpeg" alt="Product 2 Image 1">
+                <img src="IMGS/Bathroom2.jpeg" alt="Product 2 Image 2">
+                <img src="IMGS/Bathroom3.jpeg" alt="Product 2 Image 3">
+              </div>
+              <p>
+                - Our detergent is used to remove dirt, soap scum, and other debris from surfaces including tile, porcelain and acrylic in the bathroom. <br>
+                - Some common ingredients found in our bathroom detergents are surfactants, fragrances, enzymes, and bleach. <br>
+                - Surfactants work by breaking down dirt and oils so they can be washed away. 
+                Fragrances are added to make the detergent smell good. <br>
+                - Enzymes work to break down specific types of stains and odors. 
+                Bleach acts as a disinfectant and helps to brighten whites. <br>
+                - When used as directed, bathroom detergent can help keep surfaces clean and free of germs and dirt. <br>
+              </p>
+            </div>
+          
+            <div class="product" id="T-detergent">
+              <h2>Toilet Detergent</h2>
+              <div class="product-images">
+                <img src="IMGS/Toilet1.png" alt="Product 2 Image 1">
+                <img src="IMGS/Toilet2.png" alt="Product 2 Image 2">
+                <img src="IMGS/Toilet3.png" alt="Product 2 Image 3">
+              </div>
+              
+              <p>
+                - Our toilet detergent is a cleaning solution used to clean toilets and remove stains, dirt, and grime. <br>
+                - It is specifically formulated to clean and sanitize the surfaces of toilets, keeping them fresh and hygienic. <br>
+                - It usually comes in liquid form and can be scented or unscented. 
+                It can be used for manual cleaning or with a toilet cleaning brush. <br>
+                - The ingredients in toilet detergents can include enzymes, fragrances and specialized ingredients <br>
+                to address specific cleaning needs such as removing hard water stains or combating unpleasant odors. <br>
+                - It can be poured into the toilet bowl or spread onto the surface with a scrub brush and can also leave a pleasant scent. <br>
+              </p>
+            </div>
+          </div>
+          
+    </body>
+</html>
