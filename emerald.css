@@ -34,7 +34,6 @@ body{
     text-align: center;
     z-index: 1;
     transition: all 0.3s ease;
-    text-decoration: none;
 }
 .logo{
     height: 10%;
@@ -81,24 +80,18 @@ nav .spc span{
 nav .spc span:nth-child(2){
     margin: 7px opx;
 }
-nav {
-    list-style: none;
-}
 nav  li{
     display: inline-block;
     position: relative;
     left: 400px;
 }
-nav a{
-    text-decoration: none;
-}
+
 nav li a{
     display: inline-block;
     color: whitesmoke;
     margin-left: 55px;
     font-size: 15px;
     font-weight: 600;
-    text-decoration: none;
 }
 nav li:not(:last-child) a:hover{
     color: green;
@@ -120,24 +113,62 @@ nav li.btn:hover a{
     border: 2px solid transparent;
     transition: .4s;
 }
-.header__toggle {
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
-@media screen and (max-width: 768px) {
-    nav li {
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    .sticky-header {
+        flex-direction: column;
+        align-items: center;
+        background: transparent;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
         display: none;
+        width: 10%;
     }
-    .header__toggle{
-        display: block;
-        float: right;
-        margin-top: -60px;
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
     }
-    .header__toggle img{
-        width: 60px;
-        height: 50px;
-        
+
+    .navbar-links ul li {
+        text-align: left;
+        display: flex;
+
     }
-    
+
+    .navbar-links ul li a {
+        padding: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0;
+    }
+    nav li a{
+        color: lime;
+    }
 }
 .container{
     padding-top: 190px;
