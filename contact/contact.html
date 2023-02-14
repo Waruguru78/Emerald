@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Review</title>
+        <title>Contact</title>
         <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
         <style>
             .sticky-header{
@@ -19,7 +19,7 @@
             }
             .logo{
                 height: 10%;
-                width: 10%;
+                width: 10px;
                 background: transparent;
                 display: inline-flex;
                 align-items: center;
@@ -27,8 +27,18 @@
                 font-size: 20px;
                 cursor: pointer;
                 position: absolute;
-                left: 20px;
+                left: 70px;
                 top: 40px;
+            }
+            #video-background {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -100;
             }
             nav .spc{
                 width: 35px;
@@ -52,17 +62,12 @@
             nav .spc span:nth-child(2){
                 margin: 7px opx;
             }
-            nav {
-                list-style: none;
-            }
             nav  li{
                 display: inline-block;
                 position: relative;
-                left: 300px;
+                left: 400px;
             }
-            nav a{
-                text-decoration: none;
-            }
+
             nav li a{
                 display: inline-block;
                 color: whitesmoke;
@@ -91,33 +96,72 @@
                 border: 2px solid transparent;
                 transition: .4s;
             }
-            .header__toggle {
+            .toggle-button {
+                position: absolute;
+                top: 20px;
+                right: 60px;
                 display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
             }
-            @media screen and (max-width: 768px) {
-                nav li {
-                    display: none;
+            .toggle-button .bar {
+                height: 3px;
+                width: 100%;
+                background-color: black;
+                border-radius: 10px;
+            }
+            @media (max-width: 800px) {
+                .sticky-header {
+                    flex-direction: column;
+                    align-items: center;
+                    background: transparent;
                 }
-                .header__toggle{
-                    display: block;
-                    float: right;
-                    margin-top: 0px;
-                    position: relative;
-                    right: 40px;
-                }
-                .header__toggle img{
-                    width: 60px;
-                    height: 50px;
 
-                    
+                .toggle-button {
+                    display: flex;
                 }
-                
+
+                .navbar-links {
+                    display: none;
+                    width: 10%;
+                }
+
+                .navbar-links ul {
+                    width: 100%;
+                    flex-direction: column;
+                }
+
+                .navbar-links ul li {
+                    text-align: left;
+                    display: flex;
+
+                }
+
+                .navbar-links ul li a {
+                    padding: 10px;
+                }
+
+                .navbar-links.active {
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    width: 0;
+                }
+                nav li a{
+                    color: black;
+                }
+                nav  li.btn a{
+                    color: black;
+                }
             }
 
             #contact {
                 width: 500px;
                 margin: 0 auto;
                 text-align: center;
+            
             }
             
             #contact h2 {
@@ -142,7 +186,7 @@
                 font-size: 18px;
                 margin-bottom: 10px;
                 display: block;
-                color: whitesmoke;
+                color: black;
             }
             
             .form-group input,
@@ -183,25 +227,26 @@
                     <img src="../Images/Logo3.png" width="150" height="60" alt="EMERALD SPARKLE">
                 </a>
             </div>
-
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
             <nav>
                 <div class="spc">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-
-                <ul>
-                    <li><a href="../emerald.html">Home</a></li>
-                    <li><a href="../emerald.html#about">About</a></li>
-                    <li><a href="../emerald.html#product">Our Products</a></li>
-                    <li class="btn"><a href="#">contact</a></li>
-                </ul>
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="../emerald.html">Home</a></li>
+                        <li><a href="../emerald.html#about">About</a></li>
+                        <li><a href="../emerald.html#product">Our Products</a></li>
+                        <li class="btn"><a href="../emerald.html#contact">contact</a></li>
+                    </ul>
+                </div>
             </nav>
-
-            <button class="header__toggle">
-                <img src="../Images/list (1).png" alt="MENU">
-            </button>
 
         </header>
 
@@ -226,6 +271,14 @@
                 </form>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="script.js"></script>
+
+        <script>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+            toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+            })
+        </script>
     </body>
 </html>

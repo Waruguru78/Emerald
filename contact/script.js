@@ -12,7 +12,7 @@ $('.contact').submit(function(event){
         console.log(response)
 
         // this will automatically reload the page once new data is added
-        //window.location.reload() 
+        window.location.reload() 
         
     })
     .fail((response)=>{
