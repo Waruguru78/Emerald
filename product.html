@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
         <style>
-                        .sticky-header{
+            .sticky-header{
                 position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
-                background-color: rgb(22, 70, 22);
+                background-color: white;
                 padding: 20px;
                 text-align: center;
                 z-index: 1;
@@ -19,7 +19,7 @@
             }
             .logo{
                 height: 10%;
-                width: 10%;
+                width: 10px;
                 background: transparent;
                 display: inline-flex;
                 align-items: center;
@@ -27,7 +27,7 @@
                 font-size: 20px;
                 cursor: pointer;
                 position: absolute;
-                left: 20px;
+                left: 70px;
                 top: 40px;
             }
             nav .spc{
@@ -52,27 +52,22 @@
             nav .spc span:nth-child(2){
                 margin: 7px opx;
             }
-            nav {
-                list-style: none;
-            }
             nav  li{
                 display: inline-block;
                 position: relative;
-                left: 300px;
+                left: 400px;
             }
-            nav a{
-                text-decoration: none;
-            }
+
             nav li a{
                 display: inline-block;
-                color: whitesmoke;
-                margin-left: 55px;
+                color: green;
+                margin-left: 40px;
                 font-size: 15px;
                 font-weight: 600;
                 text-decoration: none;
             }
             nav li:not(:last-child) a:hover{
-                color: green;
+                color: lightgreen;
                 transition: .4s;
             }
             nav  li.btn a{
@@ -82,7 +77,7 @@
                 padding: 9px 28px;
                 border-radius: 30px;
                 line-height: 1.3;
-                color: whitesmoke;
+                color: green;
                 font-weight: 500;
             }
             nav li.btn:hover a{
@@ -91,27 +86,65 @@
                 border: 2px solid transparent;
                 transition: .4s;
             }
-            .header__toggle {
+            .toggle-button {
+                position: absolute;
+                top: 18px;
+                right: 60px;
                 display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
             }
-            @media screen and (max-width: 768px) {
-                nav li {
-                    display: none;
+            .toggle-button .bar {
+                height: 3px;
+                width: 100%;
+                background-color: black;
+                border-radius: 10px;
+            }
+            @media (max-width: 800px) {
+                .sticky-header {
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: transparent;
                 }
-                .header__toggle{
-                    display: block;
-                    float: right;
-                    margin-top: 0px;
-                    position: relative;
-                    right: 40px;
-                }
-                .header__toggle img{
-                    width: 60px;
-                    height: 50px;
 
-                    
+                .toggle-button {
+                    display: flex;
                 }
-                
+
+                .navbar-links {
+                    display: none;
+                    width: 10%;
+                }
+
+                .navbar-links ul {
+                    width: 100%;
+                    flex-direction: column;
+                }
+
+                .navbar-links ul li {
+                    text-align: left;
+                    display: flex;
+
+                }
+
+                .navbar-links ul li a {
+                    padding: 10px;
+                }
+
+                .navbar-links.active {
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    width: 0;
+                }
+                nav li a{
+                    color: black;
+                }
+                nav  li.btn a{
+                    color: black;
+                }
             }
             .container {
                 width: 100%;
@@ -138,6 +171,10 @@
                 height: 200px;
                 margin-right: 20px;
             }
+            .product p{
+                text-align: center;
+                line-height: 1.2;
+            }
 
         </style>
     </head>
@@ -148,25 +185,27 @@
                     <img src="Images/Logo3.png" width="150" height="60" alt="EMERALD SPARKLE">
                 </a>
             </div>
-
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
             <nav>
                 <div class="spc">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-
-                <ul>
-                    <li><a href="emerald.html">Home</a></li>
-                    <li><a href="emerald.html#about">About</a></li>
-                    <li><a href="emerald.html#product">Our Products</a></li>
-                    <li class="btn"><a href="#">contact</a></li>
-                </ul>
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="emerald.html">Home</a></li>
+                        <li><a href="emerald.html#about">About</a></li>
+                        <li><a href="emerald.html#product">Our Products</a></li>
+                        <li class="btn"><a href="#">contact</a></li>
+                    </ul>
+                </div>
             </nav>
 
-            <button class="header__toggle">
-                <img src="Images/list (1).png" alt="MENU">
-            </button>
         </header>
 
         <br><br><br><br><br><br>
@@ -227,7 +266,17 @@
                 - It can be poured into the toilet bowl or spread onto the surface with a scrub brush and can also leave a pleasant scent. <br>
               </p>
             </div>
-          </div>
+        </div>
           
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+            toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+            })
+        </script>
     </body>
 </html>
